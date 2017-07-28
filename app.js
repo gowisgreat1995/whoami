@@ -28,7 +28,7 @@ app.get('/api/whoami',function(req,res){
     
     
     res.send(req.headers);
-    res..end();
+    res.end();
 });
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
