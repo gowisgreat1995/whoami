@@ -28,7 +28,7 @@ app.get('/api/whoami',function(req,res){
     
     
     res.json(
-        {ipaddress:req.headers["x-forwarded-for"],language:req.headers["accept-language"].split(/,|;/)[1],operatingSystem:req.headers["user-agent"].split(/(|)/)[1]});
+        {ipaddress:req.headers["x-forwarded-for"],language:req.headers["accept-language"].split(/,|;/)[1],operatingSystem:req.headers["user-agent"].split(/\(|\)/)[1]});
     res.end();
 });
 // catch 404 and forward to error handler
